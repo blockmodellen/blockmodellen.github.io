@@ -225,8 +225,8 @@
     } },
   ];
   const OMR = [['alla', 'Blandat'], ['nat', 'Naturliga tal'], ['brak', 'Bråk'], ['forh', 'Förhållande'], ['proc', 'Procent']];
-  const FARG = { g: '#DEDFCE', b: '#EED5C3', y: '#F5E4D4' };
-  const INK = '#3A3B30', KOR = '#B5603F', GRON = '#5B6B3A';
+  const FARG = { g: '#D9DEDE', b: '#A9B5B8', y: '#E9ECEC' };
+  const INK = '#11212D', KOR = '#B5603F', GRON = '#2E6B5E';
 
   // ---------- Tillstånd ----------
   const rot = document.getElementById('bmova');
@@ -310,10 +310,10 @@
         if (b.s == 'kand') { stroke = GRON; sw = 2.6; }
         if (b.s && b.s.startsWith('f:')) fill = FARG[b.s.slice(2)];
         if (b.s == 'x') fill = '#F7D3C8';
-        if (b.s == 'ny') { fill = '#F5E4D4'; stroke = '#9A6146'; dash = ' stroke-dasharray="5 3"'; }
+        if (b.s == 'ny') { fill = '#E9ECEC'; stroke = '#4A5C6A'; dash = ' stroke-dasharray="5 3"'; }
         if (b.minus && !b.s) { fill = '#fff'; stroke = KOR; dash = ' stroke-dasharray="4 3"'; }
-        if (b.minus && b.s == 'fylld') { fill = '#F5E4D4'; stroke = '#9A6146'; dash = ' stroke-dasharray="5 3"'; }
-        if (valt) { fill = '#DDBEA9'; stroke = '#9A6146'; sw = 3; }
+        if (b.minus && b.s == 'fylld') { fill = '#E9ECEC'; stroke = '#4A5C6A'; dash = ' stroke-dasharray="5 3"'; }
+        if (valt) { fill = '#CCD0CF'; stroke = '#4A5C6A'; sw = 3; }
         let g = `<rect x="${x + .8}" y="${r.y}" width="${w - 1.6}" height="${rh}" rx="3" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"${dash}/>`;
         const fs = b.t ? passa(b.t, w) : 0;
         if (fs) g += txt(x + w / 2, r.y + rh / 2 + 1, b.t, fs, b.s == 'stryk' || (b.minus && !b.s) ? '#8A4A3C' : INK, 'middle', /%/.test(b.t) || /^[a-zåäö]/.test(b.t) ? 600 : 800);
