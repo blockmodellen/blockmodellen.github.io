@@ -225,8 +225,8 @@
     } },
   ];
   const OMR = [['alla', 'Blandat'], ['nat', 'Naturliga tal'], ['brak', 'Bråk'], ['forh', 'Förhållande'], ['proc', 'Procent']];
-  const FARG = { g: '#D9DEDE', b: '#A9B5B8', y: '#E9ECEC' };
-  const INK = '#11212D', KOR = '#B5603F', GRON = '#2E6B5E';
+  const FARG = { g: '#C9D9C8', b: '#CFE1ED', y: '#FCE0B2' };
+  const INK = '#2E3A36', KOR = '#C6625B', GRON = '#5F7F62';
 
   // ---------- Tillstånd ----------
   const rot = document.getElementById('bmova');
@@ -309,25 +309,25 @@
         if (b.s == 'stryk') { fill = 'url(#bmh)'; stroke = KOR; dash = ' stroke-dasharray="5 3"'; }
         if (b.s == 'kand') { stroke = GRON; sw = 2.6; }
         if (b.s && b.s.startsWith('f:')) fill = FARG[b.s.slice(2)];
-        if (b.s == 'x') fill = '#F7D3C8';
-        if (b.s == 'ny') { fill = '#E9ECEC'; stroke = '#4A5C6A'; dash = ' stroke-dasharray="5 3"'; }
+        if (b.s == 'x') fill = '#F6C9C3';
+        if (b.s == 'ny') { fill = '#F3EEE6'; stroke = '#66736C'; dash = ' stroke-dasharray="5 3"'; }
         if (b.minus && !b.s) { fill = '#fff'; stroke = KOR; dash = ' stroke-dasharray="4 3"'; }
-        if (b.minus && b.s == 'fylld') { fill = '#E9ECEC'; stroke = '#4A5C6A'; dash = ' stroke-dasharray="5 3"'; }
-        if (valt) { fill = '#CCD0CF'; stroke = '#4A5C6A'; sw = 3; }
+        if (b.minus && b.s == 'fylld') { fill = '#F3EEE6'; stroke = '#66736C'; dash = ' stroke-dasharray="5 3"'; }
+        if (valt) { fill = '#E3DCD0'; stroke = '#66736C'; sw = 3; }
         let g = `<rect x="${x + .8}" y="${r.y}" width="${w - 1.6}" height="${rh}" rx="3" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"${dash}/>`;
         const fs = b.t ? passa(b.t, w) : 0;
-        if (fs) g += txt(x + w / 2, r.y + rh / 2 + 1, b.t, fs, b.s == 'stryk' || (b.minus && !b.s) ? '#8A4A3C' : INK, 'middle', /%/.test(b.t) || /^[a-zåäö]/.test(b.t) ? 600 : 800);
+        if (fs) g += txt(x + w / 2, r.y + rh / 2 + 1, b.t, fs, b.s == 'stryk' || (b.minus && !b.s) ? '#A84E47' : INK, 'middle', /%/.test(b.t) || /^[a-zåäö]/.test(b.t) ? 600 : 800);
         if (ri == klick) g = `<g class="bmo-k" data-i="${i}" role="button" tabindex="0" aria-label="Block ${i == 'x' ? 'extra' : i + 1}">${g}</g>`;
         return g;
       };
       r.b.forEach((b, i) => { o += block(i, b, FARG[r.f]); });
-      if (r.x) o += block('x', r.x, r.x.minus ? '#fff' : '#F7D3C8');
+      if (r.x) o += block('x', r.x, r.x.minus ? '#fff' : '#F6C9C3');
     });
     // klamrar
     st.kl.forEach(k => {
       const r = st.rader[k.rad], fr = k.fr == null ? 0 : k.fr, ti = k.ti == null ? (r.x ? 'x' : r.b.length - 1) : k.ti;
       const x1 = bx(r, fr) + 2, x2 = bx(r, ti) + bwid(r, ti) - 2, m = (x1 + x2) / 2, q = String(k.t).startsWith('?');
-      const f = q ? KOR : (k.id == 'bok' || k.id == 'tr' || k.id == 'rab' || k.rod) ? '#8A4A3C' : GRON, lv = ((k.niva || 1) - 1) * 31;
+      const f = q ? KOR : (k.id == 'bok' || k.id == 'tr' || k.id == 'rab' || k.rod) ? '#A84E47' : GRON, lv = ((k.niva || 1) - 1) * 31;
       if (k.pos == 'o') { const yy = r.y - 4 - lv; o += `<path d="M${x1} ${yy}v-7H${x2}v7M${m} ${yy - 7}v-5" fill="none" stroke="${INK}" stroke-width="1.5"/>` + txt(m, yy - 20, k.t, smal ? 14 : 16, f, 'middle', 800); }
       else { const yy = r.y + rh + 4 + lv; o += `<path d="M${x1} ${yy}v7H${x2}v-7M${m} ${yy + 7}v5" fill="none" stroke="${INK}" stroke-width="1.5"/>` + txt(m, yy + 22, k.t, smal ? 14 : 16, f, 'middle', 800); }
     });
