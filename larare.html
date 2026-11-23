@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lärare – Blockmodellen</title>
+<meta name="description" content="Lärarsida för Blockmodellen: lektioner med genomgång, elevblad och interaktiv övning."><meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="bilder/logo.svg?v=202611231630" type="image/svg+xml">
+<link rel="stylesheet" href="stil.css?v=202611231630">
+<style>:root{--ink:#46534D;--mid:#B9B1A4;--l:#E3DCD0;--vl:#FBF8F3;--w:#FBF8F3;--hi:#B9B1A4;--bg:#FBF8F3;--ram:#E3DCD0;--knapp:#46534D;--t:#FBF8F3;--tram:#E3DCD0}</style>
+<style>.logo .bmlogo{flex:none}nav a.on{font-weight:800;text-decoration:underline;text-underline-offset:6px}</style><style>
+.bm-steg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0 12px;padding:0;list-style:none;counter-reset:s}
+.bm-steg li{background:#fff;border:1.5px solid #E3DCD0;border-radius:16px;padding:14px 16px;counter-increment:s;font-size:15px;color:#46534D}
+.bm-steg li::before{content:counter(s);display:flex;width:30px;height:30px;border-radius:50%;background:#EFE9DF;border:1.5px solid #B9B1A4;align-items:center;justify-content:center;font-weight:800;color:#2E3A36;margin-bottom:8px}
+.bm-steg b{display:block;color:#2E3A36;font-size:16px;margin-bottom:2px}
+.bm-gang{text-align:center;background:#EFE9DF;border:1.5px solid #E3DCD0;border-radius:999px;padding:9px 16px;margin:0 0 30px;font-weight:700;color:#46534D;font-size:15px}
+.bm-del{display:flex;gap:16px;align-items:center;background:#fff;border:1.5px solid #E3DCD0;border-radius:18px;padding:18px 20px;margin-bottom:12px;scroll-margin-top:20px}
+.bm-del i{font-style:normal;width:56px;height:56px;border-radius:50%;border:1.5px solid #B9B1A4;box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:none}
+.bm-del h2{margin:0 0 2px;font-size:22px}.bm-del p{margin:0;color:#66736C;font-size:15px}.bm-del>div{flex:1}
+.bm-del .snart{flex:none;font-size:13.5px;font-weight:700;color:#46534D;background:#EFE9DF;border-radius:999px;padding:6px 14px}
+.bm-lek{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.bm-del>.bm-lek{flex:0 0 100%}.bm-lek a{display:flex;align-items:center;gap:10px;background:#F8F4EE;border:1.5px solid #E3DCD0;border-radius:12px;padding:10px 14px;text-decoration:none;color:#2E3A36;font-weight:700;font-size:15px}.bm-lek a:hover{border-color:#B9B1A4}.bm-lek a span{width:26px;height:26px;border-radius:50%;background:#EFE9DF;border:1.5px solid #B9B1A4;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}.bm-del.lek{flex-wrap:wrap}@media (max-width:700px){.bm-lek{grid-template-columns:minmax(0,1fr)}}.bm-del>.bm-lek{min-width:0;box-sizing:border-box}.bm-lek .lk{min-width:0;box-sizing:border-box}
+.bm-lek .lk{display:flex;align-items:center;gap:10px;background:#F8F4EE;border:1.5px solid #E3DCD0;border-radius:12px;padding:10px 12px;color:#2E3A36;font-weight:700;font-size:15px}.bm-lek .lk>span{width:26px;height:26px;border-radius:50%;background:#EFE9DF;border:1.5px solid #B9B1A4;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}.bm-lek .lk .lt{flex:1}.bm-lek .lk b{display:flex;gap:6px}.bm-lek .lk b a{padding:5px 10px;border-radius:999px;font-size:13px;background:#2E3A36;color:#fff;border:0}.bm-lek .lk b a.pdf{background:#fff;color:#2E3A36;border:1.5px solid #2E3A36}
+.bm-lek .lt{font-style:normal;display:flex;flex-direction:column}.bm-lek .lt small{font-weight:600;color:#66736C;font-size:13px}
+@media (max-width:400px){.bm-lek .lk{flex-wrap:wrap}.bm-lek .lk b{flex:1 1 100%;margin-left:36px}}
+.bm-del:target{box-shadow:0 0 0 3px #B9B1A4}
+.bm-valj{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:8px 0 30px}
+.bm-valj a{display:flex;flex-direction:column;gap:10px;background:#fff;border:1.5px solid #E3DCD0;border-radius:16px;padding:16px;text-decoration:none;color:#2E3A36}
+.bm-valj a:hover{border-color:#B9B1A4;box-shadow:0 2px 8px rgba(46,58,70,.12)}
+.bm-valj i{font-style:normal;width:52px;height:52px;border-radius:50%;border:1.5px solid #B9B1A4;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.bm-valj b{font-size:17px}.bm-valj small{color:#66736C;font-size:14px;line-height:1.35}.bm-valj em{font-style:normal;margin-top:auto;font-weight:700;color:#46534D;font-size:14px}.bm-valj a{display:grid;grid-template-columns:52px 1fr;column-gap:14px;row-gap:2px;align-items:center}.bm-valj a i{grid-row:1/span 3}.bm-valj a b,.bm-valj a small,.bm-valj a em{grid-column:2;margin:0}
+.bm-valj2{grid-template-columns:repeat(2,minmax(0,1fr))}@media (max-width:1000px){.bm-valj{grid-template-columns:1fr 1fr}}@media (max-width:560px){.bm-valj{grid-template-columns:1fr}}
+@media (max-width:900px){.bm-steg{grid-template-columns:1fr 1fr}}@media (max-width:560px){.bm-steg{grid-template-columns:1fr}.bm-del{flex-wrap:wrap}.bm-del>div{flex:1 1 calc(100% - 72px)}.bm-del .snart{margin-left:72px}}
+</style><style>
+.bm-slump{display:flex;align-items:center;gap:16px;background:#2E3A36;color:#fff;border-radius:18px;padding:16px 20px;margin:6px 0 24px;text-decoration:none}
+.bm-slump:hover{background:#46534D}.bm-slump-t{flex:1;display:flex;flex-direction:column;gap:2px}.bm-slump b{font-size:20px}.bm-slump small{font-size:15px;color:#EFE9DF}
+.bm-slump em{font-style:normal;font-weight:800;background:#B9B1A4;color:#2E3A36;border-radius:999px;padding:9px 18px;flex:none}
+.bm-tank{background:#fff;border:1.5px solid #E3DCD0;border-radius:18px;margin:0 0 22px}
+.bm-tank summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;padding:14px 20px 14px 48px;position:relative}
+.bm-tank summary::-webkit-details-marker{display:none}
+.bm-tank summary::before{content:"+";position:absolute;left:16px;top:15px;width:24px;height:24px;border-radius:50%;background:#46534D;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1}
+.bm-tank[open] summary::before{content:"\2212"}
+.bm-tank summary span{font-weight:800;font-size:18px;color:#46534D}.bm-tank summary small{color:#66736C;font-size:14.5px}
+.bm-tank .bm-steg{margin:0;padding:0 16px 16px}
+@media (max-width:560px){.bm-slump{flex-wrap:wrap;padding:14px 16px}.bm-slump em{width:100%;text-align:center}.bm-tank summary small{display:none}.bm-tank summary::before{top:13px}
+.panel{margin-bottom:18px!important;padding:20px 20px!important}.panel h1{font-size:34px!important}.panel p{font-size:16px!important;line-height:1.45!important}.panel p .mer{display:none}section.bm-del.lek>i.eik{width:48px!important;height:48px!important}}
+</style><style>
+.bm-omr{background:#fff;border:1.5px solid #E3DCD0;border-top:6px solid #2E3A36;border-radius:18px;padding:16px 20px 18px;margin:0 0 16px;scroll-margin-top:16px}
+.bm-omr-h{display:flex;align-items:center;gap:14px;margin:0 0 14px}.bm-omr-h img{width:56px;height:56px;flex:none;box-sizing:border-box;border:2px solid #E3DCD0;border-radius:14px;object-fit:cover;background:#FBF8F3}
+.bm-omr-h h2{margin:0;font-size:24px}.bm-omr-h small{display:block;color:#66736C;font-size:14px;font-weight:600}
+.bm-omr h3{font-family:Inter,sans-serif;margin:14px 0 8px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#66736C}
+.bm-gg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.bm-gg>div{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;background:#F8F4EE;border:1.5px solid #E3DCD0;border-radius:12px;padding:9px 12px;min-width:0}
+.bm-gg>div>span{width:26px;height:26px;border-radius:50%;background:#EFE9DF;border:1.5px solid #B9B1A4;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:none}
+.bm-gg>div>em{flex:1;font-style:normal;font-weight:700;font-size:15px;color:#2E3A36;min-width:0;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.bm-gg>div>b{display:flex;gap:6px;flex:1 1 100%;margin-left:36px}.bm-gg>div>b a{padding:5px 10px;border-radius:999px;font-size:13px;background:#2E3A36;color:#fff;text-decoration:none}.bm-gg>div>b a.pdf{background:#fff;color:#2E3A36;border:1.5px solid #2E3A36;padding:3.5px 9px}.bm-gg>div>b a.ova{background:#B9B1A4;color:#2E3A36;font-weight:700}
+.bm-ov{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.bm-ov a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;font-size:15px;border-radius:999px;padding:8px 14px;background:#F3EEE6;border:1.5px solid #B9B1A4;color:#2E3A36}
+.bm-ov a:hover{background:#DDD5C8}.bm-ov a.slump{background:#2E3A36;border-color:#2E3A36;color:#fff}.bm-ov a.slump:hover{background:#46534D}
+@media (max-width:900px){.bm-gg{grid-template-columns:1fr 1fr}}@media (max-width:600px){.bm-gg{grid-template-columns:1fr}.bm-omr{padding:14px 14px 16px}.bm-omr-h img{width:48px;height:48px;border-radius:12px}.bm-omr-h h2{font-size:21px}}
+</style><style>
+.roll{display:inline-block;font:800 13px Inter,sans-serif;letter-spacing:.05em;text-transform:uppercase;background:#F8C772;color:#2E3A36;border-radius:999px;padding:4px 12px;margin:0 0 10px}
+.las{max-width:460px;margin:10px auto 40px;background:#fff;border:1.5px solid #E3DCD0;border-top:6px solid #2E3A36;border-radius:18px;padding:22px 24px}
+.las h2{margin:0 0 6px;font-size:24px}.las p{margin:0 0 14px;color:#46534D;font-size:15.5px}
+.las form{display:flex;gap:8px;flex-wrap:wrap}.las input{font:inherit;font-size:18px;flex:1;min-width:0;padding:9px 12px;border:2px solid #B9B1A4;border-radius:12px}
+.las input:focus{outline:3px solid #B9B1A4;outline-offset:1px}
+.las button{font:inherit;font-size:16px;font-weight:800;background:#2E3A36;color:#fff;border:0;border-radius:12px;padding:10px 18px;cursor:pointer}
+.las .fel{color:#A0473F;font-weight:700;margin:10px 0 0;min-height:1.2em;font-size:15px}
+.gang{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 20px;padding:0;list-style:none;counter-reset:g}
+.gang li{background:#fff;border:1.5px solid #E3DCD0;border-radius:16px;padding:12px 14px;font-size:14.5px;color:#46534D;counter-increment:g;display:flex;gap:10px}
+.gang li::before{content:counter(g);width:28px;height:28px;border-radius:50%;background:#2E3A36;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.gang b{display:block;color:#2E3A36;font-size:15.5px}
+.uk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.uk>div{background:var(--al);border:1.5px solid var(--am);border-radius:12px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;min-width:0}
+.uk>div>span{width:26px;height:26px;border-radius:50%;background:#fff;border:1.5px solid var(--ab);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:none}
+.uk>div>em{flex:1;font-style:normal;font-weight:700;font-size:15px;color:#2E3A36;min-width:0}
+.uk>div>p{flex:1 1 100%;margin:0 0 0 36px;display:flex;gap:6px;flex-wrap:wrap}
+.uk a{padding:5px 11px;border-radius:999px;font-size:13px;text-decoration:none;font-weight:700}
+.uk a.kp{background:#fff;color:#2E3A36;border:1.5px solid #2E3A36;padding:3.5px 10px}.uk a.ko{background:var(--ab);color:#2E3A36}
+.uk a.kt{background:#2E3A36;color:#fff}.uk a.km{color:#2E3A36;text-decoration:underline;padding:5px 4px}
+.lekh{max-width:980px;margin:0 auto 14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lekh img{width:56px;height:56px;border-radius:14px;border:2px solid var(--am)}
+.lekh h2{margin:0;font-size:28px;color:var(--a)}.lekh small{display:block;color:#66736C;font-weight:600}
+.lekh .nav2{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.lekh .nav2 a{text-decoration:none;font-weight:700;font-size:14px;color:#2E3A36;border:1.5px solid #B9B1A4;border-radius:999px;padding:6px 12px;background:#fff}
+.steg{display:grid;gap:12px;max-width:980px;margin:0 auto}
+.st{display:grid;grid-template-columns:54px 1fr auto;gap:16px;align-items:center;background:#fff;border:1.5px solid #E3DCD0;border-left:8px solid var(--a);border-radius:18px;padding:18px 20px}
+.st>i{font-style:normal;width:46px;height:46px;border-radius:12px;background:var(--al);border:1.5px solid var(--ab);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#2E3A36}
+.st h3{margin:0 0 3px;font-size:20px;font-family:Inter,sans-serif;font-weight:800;color:#2E3A36}.st p{margin:0;color:#46534D;font-size:15px;line-height:1.45}
+.st .kn{display:flex;flex-direction:column;gap:6px}
+.st .kn a,.st .kn button{font:inherit;text-align:center;text-decoration:none;font-weight:800;font-size:14.5px;border-radius:12px;padding:9px 16px;background:#2E3A36;color:#fff;white-space:nowrap;border:0;cursor:pointer}
+.st .kn .lj{background:#fff;color:#2E3A36;border:1.5px solid #2E3A36;padding:7.5px 15px}
+.st.kommer{border-style:dashed;border-left-style:solid;background:#FBF8F3}.st.kommer .kn span{font-weight:800;font-size:14.5px;border-radius:12px;padding:9px 16px;background:#E3DCD0;color:#66736C}
+.bakat{max-width:980px;margin:18px auto 0}
+.kopierad{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#2E3A36;color:#fff;font-weight:700;border-radius:999px;padding:10px 18px;opacity:0;transition:opacity .2s;pointer-events:none}.kopierad.syns{opacity:1}
+@media (max-width:900px){.gang{grid-template-columns:1fr 1fr}.uk{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.gang,.uk{grid-template-columns:1fr}.st{grid-template-columns:44px 1fr}.st>i{width:40px;height:40px}.st .kn{grid-column:1/-1}}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="larare.html" aria-label="Mattekompassen, Örtagårdsskolan Malmö"><img src="bilder/kompass.png?v=202611231630" alt="" style="width:46px;height:46px"><span>Mattekompassen<small>Örtagårdsskolan Malmö</small></span></a>
+<div class="hoger"><nav aria-label="Huvudmeny"><a href="larare.html" class="on">Lektioner</a><a href="index.html">Elevernas sida</a></nav></div></div></header>
+
+<style>section.panel.panel{background:linear-gradient(115deg,#EFE9DF,#E3DCD0)!important;box-shadow:inset 0 0 0 2px #B9B1A4!important}section.panel.panel h1{color:#2E3A36!important}section.panel.panel .etikett{color:#46534D!important}section.panel.panel .sti,section.panel.panel .sti a{color:#46534D!important}section.panel.panel p{color:#46534D!important}.kapblock,.ovkort,.np .infobox,.pi-intro div,.pi-info>div{background:linear-gradient(110deg,#FBF8F3,#EFE9DF)!important;border:2px solid #E3DCD0!important;box-shadow:none}.typ,.bg-ruta,.bt-ruta,.bm-steg li,.bm-valj a,.bm-del,.bm-tips li,.pi-omr button,.pisa .enhet,.np .ib4>div,.upg,.r6k,.r6steg div,.r6kap a:not(.forst),.ruta,.kq-lruta{background:#fff!important;border:1.5px solid #E3DCD0!important;border-top:6px solid #2E3A36!important}.kapblock h2,.kapblock h3:first-child,.r6sek,.r6k h3,.typ b,.bm-steg b{color:#46534D}.knapp{background:#46534D!important;color:#fff!important}</style><style>.panel{background:#EFE9DF!important;box-shadow:inset 0 0 0 2px #B9B1A4}.panel .sti,.panel .sti a{color:#66736C}.panel h1{color:var(--ink)}.panel p{color:#46534D;max-width:none}</style><div class="wrap"><section class="panel"><div><span class="roll">Lärare</span><h1><a href="larare.html" style="color:inherit;text-decoration:none">Blockmodellen</a></h1><p>15 lektioner med genomgång, elevblad och interaktiv övning.<br class="bryt"> Varje lektion följer samma gång.</p></div><div class="blockrad" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></section></div><main><section><div class="wrap"><div id="larare"><noscript>Lärarsidan behöver JavaScript.</noscript></div></div></section></main><div class="kopierad" role="status">Länken är kopierad</div><script>
+(function(){
+var K={"salt": "dGE4DVhoh9vZMzY7+1wh6w==", "iv": "UO0+uHrzUTuEvU2f", "iter": 300000, "data": "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"},D=null,IK={tal:"bm-tal",brak:"bm-brak",forhallande:"bm-forh",procent:"bm-procent"};
+var $=function(s){return document.querySelector(s)},app=$("#larare");
+function b64(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+async function las(p){var e=new TextEncoder(),bas=await crypto.subtle.importKey("raw",e.encode(p),"PBKDF2",false,["deriveKey"]);
+ var k=await crypto.subtle.deriveKey({name:"PBKDF2",salt:b64(K.salt),iterations:K.iter,hash:"SHA-256"},bas,{name:"AES-GCM",length:256},false,["decrypt"]);
+ var t=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(K.iv)},k,b64(K.data));return JSON.parse(new TextDecoder().decode(t))}
+function lasForm(){document.body.removeAttribute("data-omr");
+ app.innerHTML='<div class="las"><h2>Lärarsidan är låst</h2><p>Skriv lärarnas lösenord för att se lektionerna.</p><form><input type="password" autocomplete="current-password" aria-label="Lösenord" placeholder="Lösenord"><button>Öppna</button></form><p class="fel" role="alert"></p></div>';
+ var f=app.querySelector("form"),i=f.querySelector("input"),fel=app.querySelector(".fel");i.focus();
+ f.onsubmit=async function(ev){ev.preventDefault();fel.textContent="Öppnar …";
+  try{D=await las(i.value);try{sessionStorage.setItem("bm-larare",i.value)}catch(x){}fel.textContent="";visa()}
+  catch(x){fel.textContent="Fel lösenord. Försök igen.";i.select()}}}
+function absolut(u){return new URL(u,location.href).href}
+function kopiera(u){var t=$(".kopierad");function ok(){t.classList.add("syns");setTimeout(function(){t.classList.remove("syns")},1800)}
+ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){prompt("Kopiera länken:",u)});else prompt("Kopiera länken:",u)}
+function lista(){document.body.removeAttribute("data-omr");document.title="Lärare – Blockmodellen";
+ var h='<ol class="gang"><li><span><b>Genomgång</b>Visa PPT:n och lös exemplet tillsammans.</span></li><li><span><b>Elevbladet</b>Eleverna löser uppgift 2 i par och uppgift 3 själva.</span></li><li><span><b>Interaktiv övning</b>Samma uppgifter med nya tal på Chromebook.</span></li><li><span><b>Klar tidigt?</b>Slumpade uppgifter inom området.</span></li></ol>';
+ Object.keys(D.omr).forEach(function(o){var L=D.lektioner.filter(function(x){return x.omr==o});
+  h+='<section class="bm-omr" id="'+o+'"><div class="bm-omr-h"><img src="bilder/'+IK[o]+'.png" alt=""><div><h2>'+esc(D.omr[o].namn)+'</h2><small>'+L.length+' lektioner</small></div></div><div class="uk">'+
+  L.map(function(x){return '<div><span>'+x.n+'</span><em>'+esc(x.titel)+'</em><p><a class="kt" href="'+esc(x.ppt)+'" target="_blank" rel="noopener">Lektion (PPT)</a><a class="kp" href="'+x.pdf+'" target="_blank" rel="noopener">Elevblad</a><a class="ko" href="ova.html?l='+x.l+'" target="_blank" rel="noopener">Övning</a><a class="km" href="#lektion-'+x.n+'">Öppna lektionen →</a></p></div>'}).join("")+'</div></section>'});
+ app.innerHTML=h}
+function lektion(n){var x=D.lektioner.filter(function(y){return y.n==n})[0];if(!x)return lista();
+ var o=D.omr[x.omr],L=D.lektioner.filter(function(y){return y.omr==x.omr}),i=L.indexOf(x),fo=D.lektioner.filter(function(y){return y.n==n-1})[0],na=D.lektioner.filter(function(y){return y.n==n+1})[0];
+ document.body.dataset.omr=x.omr;document.title=x.titel+" – Lärare – Blockmodellen";var u=x.uppg||[];
+ var ova="ova.html?l="+x.l,sl="trana.html?omr="+o.slump;
+ app.innerHTML='<div class="lekh"><img src="bilder/'+IK[x.omr]+'.png" alt=""><div><small>Lektion '+(i+1)+' av '+L.length+' · '+esc(o.namn)+'</small><h2>'+esc(x.titel)+'</h2></div><div class="nav2">'+(fo?'<a href="#lektion-'+fo.n+'">← Föregående</a>':'')+(na?'<a href="#lektion-'+na.n+'">Nästa: '+esc(na.titel)+' →</a>':'')+'</div></div><div class="steg">'+
+ '<div class="st"><i>1</i><div><h3>Genomgång</h3><p>Visa PPT:n på tavlan. Lös uppgift 1'+(u[0]?' ('+esc(u[0])+')':'')+' tillsammans, steg för steg med blocken.</p></div><div class="kn"><a href="'+esc(x.ppt)+'" target="_blank" rel="noopener">Öppna PPT</a></div></div>'+
+ '<div class="st"><i>2</i><div><h3>Elevbladet</h3><p>Uppgift 2'+(u[1]?' ('+esc(u[1])+')':'')+' i par och uppgift 3'+(u[2]?' ('+esc(u[2])+')':'')+' själv. Eleverna ritar blocket i rutan och svarar med en hel mening.</p></div><div class="kn"><a href="'+x.pdf+'" target="_blank" rel="noopener">Skriv ut PDF</a></div></div>'+
+ '<div class="st"><i>3</i><div><h3>Interaktiv övning</h3><p>Samma tre uppgifter med nya tal. Eleverna löser dem på Chromebook, steg för steg med blocken.</p></div><div class="kn"><a href="'+ova+'" target="_blank" rel="noopener">Visa på tavlan</a><button class="lj" data-k="'+ova+'">Kopiera elevlänk</button></div></div>'+
+ '<div class="st"><i>4</i><div><h3>Klar tidigt?</h3><p>Slumpade uppgifter i '+esc(o.namn.toLowerCase())+', med nya tal och namn varje gång.</p></div><div class="kn"><a class="lj" href="'+sl+'" target="_blank" rel="noopener">Öppna</a><button class="lj" data-k="'+sl+'">Kopiera elevlänk</button></div></div>'+
+ '<div class="st kommer"><i>?</i><div><h3>Facit och tips</h3><p>Svar till elevbladet och vanliga fel att se upp med.</p></div><div class="kn"><span>Kommer snart</span></div></div>'+
+ '</div><div class="bakat"><a class="knapp" href="#">← Alla lektioner</a></div>';
+ app.querySelectorAll("[data-k]").forEach(function(b){b.onclick=function(){kopiera(absolut(b.dataset.k))}});window.scrollTo(0,0)}
+function visa(){if(!D)return lasForm();var m=location.hash.match(/^#lektion-(\d+)$/);m?lektion(+m[1]):lista()}
+window.addEventListener("hashchange",visa);
+var s=null;try{s=sessionStorage.getItem("bm-larare")}catch(x){}
+if(s)las(s).then(function(d){D=d;visa()},function(){visa()});else visa();
+})();
+</script><style>.m6h i.eik{width:60px!important;height:60px!important}.bm-valj i.eik{width:58px!important;height:58px!important}.bm-del>i.eik{width:64px!important;height:64px!important}</style>
+<footer><div class="wrap"><b>Blockmodellen – en del av Mattekompassen</b><span><a href="https://mattekompassen.se" style="color:inherit;font-weight:700">Till Mattekompassen: mattekompassen.se →</a></span></div></footer>
+</body></html>
